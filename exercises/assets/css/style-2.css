@@ -1,0 +1,20 @@
+/* Desktops */
+@media (min-width: 768px) { body { padding: 4% 20% } }
+
+/* Mobiles */
+@media (max-width: 767px) { body { padding: 12% 8% } }
+
+h1 {
+    font-size: 84px;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: -2px;
+    margin-bottom: 32px;
+}
+
+p {
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
