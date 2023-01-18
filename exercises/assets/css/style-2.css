@@ -1,3 +1,25 @@
+/*============ WEB BROSWER RESET ============*/
+
+* { margin: 0; padding: 0; border: none }
+*, *::before, *::after { box-sizing: border-box }
+html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
+scroll-behavior: smooth; scroll-padding-top: 20px }
+body { max-width: 1600px; line-height: 1.5; margin-left: auto; margin-right: auto; 
+min-height: 100vh; text-rendering: optimizeSpeed }  
+img { width: 100%; height: auto; display: block }
+h1, h2, h3, h4 { width: 100% }
+input, button, textarea, select { font: inherit }
+
+/* ---------------------- ENDS ---------------------- */
+
+body { background-color: lightcyan}
+
+/* Desktops */
+@media (min-width: 768px) { section { padding: 4% 20% } }
+
+/* Mobiles */
+@media (max-width: 767px) { section { padding: 12% 8% } }
+
 h1 {
     font-size: 84px;
     text-align: center;
@@ -13,37 +35,26 @@ p {
     margin-bottom: 20px;
 }
 
-section{
-    padding: 5% 5% 5% 5%;
-}
-
 .section-1 {
     background-color: lightblue;
 }
 
 .section-2 {
     background-color: lightseagreen;
+    color:white;
 }
 
 .section-3 {
     background-color: lightgreen;
+    background-image: linear-gradient(90deg, green, white, orange);
 }
 
 .section-4 {
     background-color: lightyellow;
+    background-image:linear-gradient(90deg, black, white, black);
 }
 
 .section-5 {
-    background-color: lightpink;
+    background-color: cyan;
+    background-image: linear-gradient(90deg, blue, white, red);
 }
-
-
-/* ---------------------- ENDS ---------------------- */
-
-body { background-color: lightcyan}
-
-/* Desktops */
-@media (min-width: 768px) { body { padding: 4% 20% } }
-
-/* Mobiles */
-@media (max-width: 767px) { body { padding: 12% 8% } }
