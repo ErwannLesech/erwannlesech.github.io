@@ -14,10 +14,33 @@ p {
 }
 
 section{
-    margin: 5% 5% 5% 5%;
+    padding: 5% 5% 5% 5%;
 }
 
+.section-1 {
+    background-color: lightblue;
+}
+
+.section-2 {
+    background-color: lightseagreen;
+}
+
+.section-3 {
+    background-color: lightgreen;
+}
+
+.section-4 {
+    background-color: lightyellow;
+}
+
+.section-5 {
+    background-color: lightpink;
+}
+
+
 /* ---------------------- ENDS ---------------------- */
+
+body { background-color: lightcyan}
 
 /* Desktops */
 @media (min-width: 768px) { body { padding: 4% 20% } }
