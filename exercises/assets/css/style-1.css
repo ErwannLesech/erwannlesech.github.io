@@ -1,8 +1,10 @@
-/* Desktops */
-@media (min-width: 768px) { body { padding: 4% 20% } }
+h3{
+    color: blue;
+}
 
-/* Mobiles */
-@media (max-width: 767px) { body { padding: 12% 8% } }
+h2{
+    color: blue;
+}
 
 h1 {
     font-size: 84px;
@@ -10,6 +12,7 @@ h1 {
     font-weight: normal;
     letter-spacing: -2px;
     margin-bottom: 32px;
+    color: blue;
 }
 
 p {
@@ -17,4 +20,15 @@ p {
     font-family: sans-serif;
     line-height: 1.6;
     margin-bottom: 20px;
+    color: darkslateblue;
 }
+
+/* ---------------------- ENDS ---------------------- */
+
+body { background-color: lightcyan}
+
+/* Desktops */
+@media (min-width: 768px) { body { padding: 4% 20% } }
+
+/* Mobiles */
+@media (max-width: 767px) { body { padding: 12% 8% } }
