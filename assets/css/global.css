@@ -54,3 +54,13 @@ img {
     margin-bottom: 32px;
     border-radius: 24px;
 }
+
+.pages{
+    margin: 54px 0; /*  Only top and bottom margins have values */
+    padding: 16px; /* Same value on all four sides. */
+    border-style: solid; /* Same value on all four sides. */
+    border-width: 2px; /* All four borders have equal widths. */
+    border-color: #000; /* All four borders have same black color. */
+    text-align: center;
+    text-transform: uppercase;
+}
