@@ -1,11 +1,201 @@
 /* Global */
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-size: 20px;
+
+  background-color: rgb(09,27,42);
+  color: rgb(255, 255, 255);
 }
 
 html {
-  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body header{
+  font-family: 'Merriweather', serif;
+}
+
+/* Transition */
+
+a, .btn {
+  transition: all 0.3s ease 0s;
+}
+
+.btn {
+    padding: 1rem;
+    font-weight: bold;
+}
+
+/* Header */
+
+/* Nav */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    gap: 50%;
+}
+
+.logo img {
+    width: 80px;
+    border-radius: 60%;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    list-style: none;
+    font-size: 1rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: rgb(35, 153, 208);
+}
+
+/* Main */
+
+/* Hero */
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 83vh;
+}
+
+.hero-info-container {
+    margin-top: 1rem;
+    margin-left: 5rem;
+    width: 50%;
+}
+
+.hero-text {
+    font-size: 2rem;
+    font-weight: bold;    
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.hero-text h2 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(35, 153, 208);
+}
+
+.hero-text p {
+    margin: 2rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.hero-btn {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content:flex-start;
+    gap: 2rem;
+}
+
+#hero-btn-cv {
+    width: 11rem;
+    height: 3.5rem;
+    background-color: rgb(35, 153, 208);
+    border: 0.1rem solid rgb(35, 153, 208);
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
+    color: rgb(0, 0, 0);
+}
+
+#hero-btn-cv:hover {
+    cursor: pointer;
+    background-color: black;
+    color: rgb(35, 153, 208);
+    transition-duration: 0.3s;
+}
+
+#hero-btn-contact {
+    width: 11rem;
+    height: 3.5rem;
+    background-color: black;
+    border: 0.1rem solid rgb(35, 153, 208);
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
+    color: rgb(35, 153, 208);
+}
+
+#hero-btn-contact:hover {
+    cursor: pointer;
+    background-color: rgb(35, 153, 208);
+    color: black;
+    transition-duration: 0.3s;
+}
+
+.hero-socials {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10rem;
+    margin-left: 1rem;
+    width: 50%;
+    gap: 1rem;
+}
+
+.hero-socials img {
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+.hero-socials img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+}
+
+.hero-img-container {
+    width: 50%;
+}
+
+.hero-img-container img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: grey;
+}
+
+footer p {
+    background-color: grey;
+    color: black;
+    font-size: 1rem;
+    font-weight: 300;
 }

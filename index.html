@@ -12,13 +12,14 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="#">
-                <img src="images/logo.png" alt="Logo">
-            </a>
-        </div>
         <nav>
-            <ul>
+            <div class="logo">
+                <a href="#">
+                    <img src="assets/img/logo.jpg" alt="Logo">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projets</a></li>
@@ -27,12 +28,34 @@
         </nav>
     </header> 
     <main>
-        <section class="introduction">
+        <section class="hero">
+            <div class="hero-info-container">
+                <div class="hero-text">
+                    <h1>Hi, I am Lesech "R-One" Erwann</h1>
+                    <h2>IT engenner</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, iusto excepturi. Accusantium quia minima animi repellat exercitationem necessitatibus praesentium, voluptate minus aliquid, facilis officiis vel consequuntur suscipit esse repellendus tempore.</p>
+                </div>
+                <div class="hero-btn">
+                    <button class="btn btn-cv" id="hero-btn-cv" onclick="window.open('assets/docs/resume-exemple.pdf')">Download CV</button>
+                    <button class="btn btn-contact" id="hero-btn-contact" onclick="window.location.href='#contact'">Contact me</button>
+                </div>
+                <div class="hero-socials">
+                    <img src="assets/img/github.png" alt="Github" onclick="location.href='https:/\/github.com/ErwannLesech'"/>
+                    <img src="assets/img/linkedin.png" alt="Linkedin" onclick="location.href='https:/\/www.linkedin.com/in/erwann-lesech-68991b233/'"/>
+                </div>
+            </div>
+            <div class="hero-img-container">
+                <img src="assets/img/hero_img.jpeg" alt="Hero picture">
+            </div>
+        </section>
+
+        <section class="about">
+            
         </section>
     </main>   
     <footer>
         <div class="footer">
-            <p>© 2020 Lesech "R-One" Erwann</p>
+            <p>© R-One 2020, All Rights Reserved - R-One's portfolio</p>
         </div>
     </footer>
 </body>
