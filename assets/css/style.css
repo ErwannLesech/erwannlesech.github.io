@@ -9,7 +9,6 @@
 
   font-size: 20px;
 
-  background-color: rgb(09,27,42);
   color: rgb(255, 255, 255);
 }
 
@@ -34,19 +33,29 @@ a, .btn {
 
 /* Header */
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 12vh;
+    background-color: rgb(09,27,42);
+}
+
 /* Nav */
 
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    height: 12vh;
     gap: 50%;
 }
 
 .logo img {
     width: 80px;
-    border-radius: 60%;
+    border-radius: 45%;
 }
 
 .logo:hover {
@@ -79,7 +88,9 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 83vh;
+    height: 88vh;
+    margin-top: 12vh;
+    background-color: rgb(09,27,42);
 }
 
 .hero-info-container {
@@ -99,21 +110,31 @@ nav{
     padding-bottom: 1rem;
 }
 
+.hero-text h1 span{
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(204, 116, 0);
+
+}
+
 .hero-text h2 {
     padding-bottom: 1rem;
     font-size: 2rem;
     font-weight: bold;
     color: rgb(35, 153, 208);
+
 }
 
 .hero-text p {
     margin: 2rem 0;
     font-size: 1rem;
     font-weight: 300;
+    width: 70%;
 }
 
 .hero-btn {
-    margin-top: 1rem;
+    margin-top: 5rem;
     margin-left: 1rem;
     display: flex;
     justify-content:flex-start;
@@ -166,6 +187,7 @@ nav{
 .hero-socials img {
     height: 2rem;
     margin-right: 1rem;
+    border-radius: 50%;
 }
 
 .hero-socials img:hover {
@@ -182,6 +204,53 @@ nav{
     width: 80%;
     border-radius: 50%;
 }
+
+/* About */
+
+.about-info-container {
+    height: 88vh;
+    background-color: rgb(15,44,68);
+}
+
+.about-info-container h1 {
+    padding-top: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.about-info-container h1 span {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(204, 116, 0);
+}
+
+.about-info-content-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5rem;
+    height: 70vh;
+}
+
+.about-img  {
+    width: 30%;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.about-info {
+    width: 60%;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
 
 /* Footer */
 
