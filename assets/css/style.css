@@ -58,11 +58,6 @@ nav{
     border-radius: 45%;
 }
 
-.logo:hover {
-    transform: scale(1.2);
-    transition-duration: 0.3s;
-}
-
 .nav-links {
     display: flex;
     justify-content: space-between;
@@ -218,13 +213,17 @@ nav{
     font-weight: bold;
     padding-bottom: 1rem;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(35, 153, 208);
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.5rem;
 }
 
 .about-info-container h1 span {
     font-size: 3rem;
     font-weight: bold;
     padding-bottom: 1rem;
-    color: rgb(204, 116, 0);
+    color: rgb(35, 153, 208);
 }
 
 .about-info-content-container {
@@ -250,6 +249,13 @@ nav{
     font-weight: 300;
 }
 
+.about-info h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(35, 153, 208);
+}
+
 .about-text p {
     margin: 2rem 0;
     font-size: 1rem;
@@ -266,7 +272,89 @@ nav{
     color: rgb(204, 116, 0);
 }
 
+/* Skills */
 
+.skills-container {
+    height: 88vh;
+    background-color: rgb(09,27,42);
+}
+
+.skills-container h1 {
+    padding-top: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(35, 153, 208);
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.5rem;
+}
+
+.skills-container h1 span {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(35, 153, 208);
+}
+
+.skills-container h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+}
+
+.skills-info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2.5rem;
+    height: 72vh;
+}
+
+.skills-info-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(35, 153, 208);
+}
+
+.Languages {
+    width: 30%;
+}
+
+.Tools {
+    width: 30%;
+}
+
+.Softwares {
+    width: 30%;
+}
+
+.skill-elm {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 0;
+    height: 10vh;
+}
+
+#sk-python {
+    width: 20%;
+}
+
+#sk-c {
+    width: 10%;
+}
+
+#sk-csharp {
+    width: 10%;
+}
+
+#sk-sql {
+    width: 20%;
+}
 
 /* Footer */
 
