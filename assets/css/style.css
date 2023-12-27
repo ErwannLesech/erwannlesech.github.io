@@ -231,8 +231,8 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 5rem;
-    height: 70vh;
+    padding: 0 2.5rem;
+    height: 72vh;
 }
 
 .about-img  {
@@ -248,6 +248,22 @@ nav{
     width: 60%;
     font-size: 1rem;
     font-weight: 300;
+}
+
+.about-text p {
+    margin: 2rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+
+}
+
+#about-epita-link {
+    color: rgb(35, 153, 208);
+    text-decoration: none;
+}
+
+#about-epita-link:hover {
+    color: rgb(204, 116, 0);
 }
 
 
