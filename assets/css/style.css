@@ -332,6 +332,14 @@ nav{
     width: 30%;
 }
 
+.skill-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 0;
+    height: 10vh;
+}
+
 .skill-elm {
     display: flex;
     justify-content: space-around;
@@ -339,6 +347,8 @@ nav{
     margin: 1rem 0;
     height: 10vh;
 }
+
+/* Languages */
 
 #sk-python {
     width: 20%;
@@ -352,9 +362,70 @@ nav{
     width: 10%;
 }
 
+#sk-rust {
+    width: 30%;
+}
+
 #sk-sql {
     width: 20%;
 }
+
+#sk-html {
+    width: 10%;
+}
+
+/* Tools */
+
+#sk-git {
+    width: 10%;
+}
+
+#sk-tensorflow {
+    width: 10%;
+}
+
+#sk-arduino {
+    width: 10%;
+}
+
+#sk-docker {
+    width: 10%;
+}
+
+#sk-linux {
+    width: 10%;
+}
+
+#sk-bash {
+    width: 10%;
+}
+
+/* Softwares */
+
+#sk-unity {
+    width: 10%;
+}
+
+#sk-blender {
+    width: 10%;
+}
+
+#sk-vscode {
+    width: 10%;
+}
+
+#sk-vim {
+    width: 10%;
+}
+
+#sk-latex {
+    width: 10%;
+}
+
+#sk-flask {
+    width: 100%;
+}
+
 
 /* Footer */
 
