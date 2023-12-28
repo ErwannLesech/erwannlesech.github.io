@@ -466,6 +466,7 @@ nav{
 .current-project {
     padding: 0 2.5rem;
     text-align: left;
+    padding-bottom: 2rem;
 }
 
 .current-project-img {
@@ -483,7 +484,7 @@ nav{
     font-size: 2rem;
     font-weight: bold;
     padding-bottom: 1rem;
-    color: rgb(204, 111, 6);
+    color: rgb(35, 153, 208);
 }
 
 #project-git {
@@ -508,24 +509,51 @@ nav{
     font-weight: bold;
 }
 
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-title p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(204, 111, 6);
+}
+
+.separator {
+    width: 80%;
+    margin: 0 auto;
+    border-top: 0.1rem double rgb(35, 153, 208);
+}
+
 /* Previous Projects */
 
 .previous-projects-container {
+    padding-top: 5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
+    /*grid-template-rows: repeat(2, 1fr);*/
+    gap: 1rem;   
 }
 
 .previous-project {
-    padding: 0 2.5rem;
+    padding: 0 1rem;
     text-align: left;
+    padding-bottom: 2rem;
+}
+
+.previous-project-info {
+    border: 0.1rem solid rgb(35, 153, 208);
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
 }
 
 .previous-project-img {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 1rem;
 }
 
 .previous-project-img img {
@@ -537,7 +565,7 @@ nav{
     font-size: 2rem;
     font-weight: bold;
     padding-bottom: 1rem;
-    color: rgb(204, 111, 6);
+    color: rgb(35, 153, 208);
 }
 
 .previous-project p {
@@ -548,6 +576,26 @@ nav{
 
 .previous-project span {
     font-weight: bold;
+}
+
+.sh-img img {
+    width: 100%;
+    border-radius: 5%;   
+}
+
+.pva-img img {
+    width: 100%;
+    border-radius: 5%;   
+}
+
+.ocr-img img {
+    width: 100%;
+    border-radius: 5%;   
+}
+
+.era-img img {
+    width: 100%;
+    border-radius: 5%;   
 }
 
 /* Contact */
