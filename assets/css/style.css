@@ -20,6 +20,11 @@ body header{
   font-family: 'Merriweather', serif;
 }
 
+.anchor {
+    padding-top: 12vh;
+    margin-top: -12vh;
+}
+
 /* Transition */
 
 a, .btn {
@@ -426,6 +431,79 @@ nav{
     width: 100%;
 }
 
+/* Projects */
+
+.projects-container {
+    height: 88vh;
+    background-color: rgb(15,44,68);
+}
+
+.projects-container h1 {
+    padding-top: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(35, 153, 208);
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.5rem;
+}
+
+.projects-container h1 span {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(35, 153, 208);
+}
+
+.projects-container h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Contact */
+
+.contact-container {
+    height: 88vh;
+    background-color: rgb(09,27,42);
+}
+
+.contact-container h1 {
+    padding-top: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(35, 153, 208);
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.5rem;
+}
+
+.contact-container h1 span {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(35, 153, 208);
+}
+
+.contact-container h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact-info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2.5rem;
+    height: 72vh;
+}
 
 /* Footer */
 
