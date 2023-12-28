@@ -434,12 +434,11 @@ nav{
 /* Projects */
 
 .projects-container {
-    height: 88vh;
+    padding: 85px 0;
     background-color: rgb(15,44,68);
 }
 
 .projects-container h1 {
-    padding-top: 3rem;
     font-size: 3rem;
     font-weight: bold;
     padding-bottom: 1rem;
@@ -462,6 +461,93 @@ nav{
     font-weight: bold;
     padding: 1rem;
     text-align: center;
+}
+
+.current-project {
+    padding: 0 2.5rem;
+    text-align: left;
+}
+
+.current-project-img {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-project-img img {
+    width: 10%;
+    border-radius: 5%;
+}
+
+.current-project h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(204, 111, 6);
+}
+
+#project-git {
+    height: 1.5rem;
+    margin-right: 1rem;
+    border-radius: 50%;   
+    cursor: pointer;
+}
+
+#dart-git:hover {
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+}
+
+.current-project p {
+    padding: 0;
+    margin: 0 0 20px 0;
+    line-height: 1;
+}
+
+.current-project span {
+    font-weight: bold;
+}
+
+/* Previous Projects */
+
+.previous-projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.previous-project {
+    padding: 0 2.5rem;
+    text-align: left;
+}
+
+.previous-project-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previous-project-img img {
+    width: 10%;
+    border-radius: 5%;
+}
+
+.previous-project h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(204, 111, 6);
+}
+
+.previous-project p {
+    padding: 0;
+    margin: 0 0 20px 0;
+    line-height: 1;
+}
+
+.previous-project span {
+    font-weight: bold;
 }
 
 /* Contact */
