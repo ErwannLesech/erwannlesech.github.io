@@ -327,20 +327,29 @@ nav{
 
 .Languages {
     width: 30%;
+    border: 0.1rem solid rgb(35, 153, 208);
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
 }
 
 .Tools {
     width: 30%;
+    border: 0.1rem solid rgb(35, 153, 208);
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
 }
 
 .Softwares {
     width: 30%;
+    border: 0.1rem solid rgb(35, 153, 208);
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
 }
 
 .skill-flex {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     margin: 1rem 0;
     height: 10vh;
 }
