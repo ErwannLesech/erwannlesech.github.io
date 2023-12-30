@@ -648,6 +648,72 @@ nav{
     height: 72vh;
 }
 
+.contact-form {
+    width: 40%;
+    height: 50vh;
+    border: 0.1rem solid rgb(35, 153, 208);
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(35, 153, 208);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-info {
+    width: 40%;
+    height: 50vh;
+    border: 0.1rem solid rgb(35, 153, 208);
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.contact-info h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(35, 153, 208);
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.contact-social {
+    text-align: left;
+    margin-left: 30%;
+    margin-top: 2rem;
+}
+
+.contact-social a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.contact-social img {
+    width: 2rem;
+    border-radius: 50%;
+}
+
 /* Footer */
 
 footer {
