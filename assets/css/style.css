@@ -443,7 +443,7 @@ nav{
 /* Projects */
 
 .projects-container {
-    padding: 85px 0;
+    padding: 85px 80px;
     background-color: rgb(15,44,68);
 }
 
@@ -479,13 +479,14 @@ nav{
 }
 
 .current-project-img {
+    width: 100%;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 
 .current-project-img img {
-    width: 10%;
+    width: 30%;
     border-radius: 5%;
 }
 
@@ -542,17 +543,19 @@ nav{
     padding-top: 5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /*grid-template-rows: repeat(2, 1fr);*/
+    grid-template-rows: repeat(2, 1fr);
     gap: 1rem;   
 }
 
 .previous-project {
+    height: 100%;
     padding: 0 1rem;
     text-align: left;
     padding-bottom: 2rem;
 }
 
 .previous-project-info {
+    height: 100%;
     border: 0.1rem solid rgb(35, 153, 208);
     border-radius: 5px;
     padding: 0.2rem 1rem;
@@ -571,7 +574,7 @@ nav{
 }
 
 .previous-project h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     padding-bottom: 1rem;
     color: rgb(35, 153, 208);
@@ -645,11 +648,13 @@ nav{
     justify-content: space-around;
     align-items: center;
     padding: 0 2.5rem;
-    height: 72vh;
+    height: 75%;
+    padding-top: 2rem;
 }
 
 .contact-form {
     width: 40%;
+    height: 80%;
     border: 0.1rem solid rgb(35, 153, 208);
     padding: 1rem;
 }
@@ -658,7 +663,7 @@ nav{
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     color: rgb(35, 153, 208);
 }
 
@@ -673,7 +678,6 @@ nav{
 .contact-form label {
     font-size: 1rem;
     font-weight: 300;
-    padding: 1rem 0;
 }
 
 .contact-form textarea {
@@ -689,7 +693,6 @@ nav{
 
 .contact-form input {
     width: 100%;
-    height: 2rem;
     border: 0.1rem solid rgb(35, 153, 208);
     border-radius: 5px;
     padding: 0.2rem 1rem;
@@ -712,7 +715,7 @@ nav{
 
 .contact-info {
     width: 40%;
-    height: max-content;
+    height: 80%;
     border: 0.1rem solid rgb(35, 153, 208);
     font-size: 1rem;
     font-weight: 300;
@@ -737,7 +740,7 @@ nav{
 .contact-social {
     text-align: left;
     margin-left: 30%;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .contact-social a {
