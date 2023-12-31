@@ -41,7 +41,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
     height: 12vh;
     background-color: rgb(09,27,42);
@@ -702,6 +702,61 @@ nav{
     .Softwares {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 625px) {
+    .previous-projects-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .previous-project {
+        width: 100%;
+    }
+
+    .previous-project-info {
+        width: 100%;
+    }
+
+    .previous-project-img {
+        width: 100%;
+    }
+
+    .previous-project-img img {
+        width: 20%;
+    }
+
+    .previous-project h3 {
+        font-size: 1.5rem;
+    }
+
+    .previous-project p {
+        font-size: 1rem;
+    }
+
+    .previous-project span {
+        font-size: 1rem;
+    }
+
+    .sh-img img {
+        width: 100%;
+    }
+
+    .pva-img img {
+        width: 100%;
+    }
+
+    .ocr-img img {
+        width: 100%;
+    }
+
+    .era-img img {
+        width: 100%;
+    }
+
 }
 
 /* Contact */
