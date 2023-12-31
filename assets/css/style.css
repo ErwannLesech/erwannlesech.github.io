@@ -47,6 +47,7 @@ header {
     background-color: rgb(09,27,42);
 }
 
+
 /* Nav */
 
 nav{
@@ -86,7 +87,7 @@ nav{
     color: rgb(35, 153, 208);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     header {
         height: 35vh;
     }
@@ -239,9 +240,11 @@ nav{
     border-radius: 50%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .hero {
         padding-top: 35vh;
+        height: 100%;
+        width: 100%;
     }
 }
 
@@ -317,7 +320,7 @@ nav{
     color: rgb(204, 116, 0);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .about-info-container {
         height: 100%;
     }
@@ -416,21 +419,6 @@ nav{
     height: 10vh;
 }
 
-@media screen and (max-width: 768px) {
-    .skills-container {
-        height: 100%;
-    }
-
-    .skills-info-container {
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        padding: 1rem 2.5rem;
-        height: 100%;
-        gap: 1rem;
-    }
-}
-
 /* Languages */
 
 #sk-python {
@@ -507,6 +495,21 @@ nav{
 
 #sk-flask {
     width: 30%;
+}
+
+@media screen and (max-width: 900px) {
+    .skills-container {
+        height: 100%;
+    }
+
+    .skills-info-container {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 2.5rem;
+        height: 100%;
+        gap: 1rem;
+    }
 }
 
 /* Projects */
@@ -679,13 +682,25 @@ nav{
     border-radius: 5%;   
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .projects-container {
         padding: 0;
     }
 
     .previous-project{
         height: auto;
+    }
+
+    .Languages {
+        width: 100%;
+    }
+
+    .Tools {
+        width: 100%;
+    }
+
+    .Softwares {
+        width: 100%;
     }
 }
 
@@ -854,7 +869,7 @@ nav{
     border-radius: 50%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .contact-container {
         height: 100%;
     }
