@@ -365,79 +365,79 @@ nav{
 /* Languages */
 
 #sk-python {
-    width: 20%;
-}
-
-#sk-c {
-    width: 10%;
-}
-
-#sk-csharp {
-    width: 10%;
-}
-
-#sk-rust {
     width: 30%;
 }
 
-#sk-sql {
+#sk-c {
     width: 20%;
 }
 
+#sk-csharp {
+    width: 20%;
+}
+
+#sk-rust {
+    width: 20%;
+}
+
+#sk-sql {
+    width: 30%;
+}
+
 #sk-html {
-    width: 10%;
+    width: 20%;
 }
 
 /* Tools */
 
 #sk-git {
-    width: 10%;
+    width: 20%;
 }
 
 #sk-tensorflow {
-    width: 10%;
+    width: 20%;
 }
 
 #sk-arduino {
-    width: 10%;
+    width: 20%;
 }
 
 #sk-docker {
-    width: 10%;
+    width: 20%;
 }
 
 #sk-linux {
-    width: 10%;
+    width: 20%;
 }
 
 #sk-bash {
-    width: 10%;
+    width: 20%;
 }
 
 /* Softwares */
 
 #sk-unity {
-    width: 10%;
+    width: 20%;
 }
 
 #sk-blender {
-    width: 10%;
+    width: 20%;
 }
 
 #sk-vscode {
-    width: 10%;
+    width: 20%;
 }
 
 #sk-vim {
-    width: 10%;
+    width: 20%;
 }
 
 #sk-latex {
-    width: 10%;
+    width: 20%;
 }
 
 #sk-flask {
-    width: 100%;
+    width: 30%;
 }
 
 /* Projects */
