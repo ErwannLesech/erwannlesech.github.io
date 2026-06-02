@@ -3,6 +3,7 @@ export type Publication = {
   title: { fr: string; en: string };
   date: string;
   type: "Rapport" | "Article" | "Réflexion IA" | "Research";
+  language: "FR" | "EN";
   abstract: { fr: string; en: string };
   url?: string;
 };
@@ -11,57 +12,31 @@ export const publications: Publication[] = [
   {
     id: "p1",
     title: {
-      fr: "Évaluer un système RAG sans tomber dans la métrique-piège",
-      en: "Evaluating a RAG system without falling into the metric trap",
+      fr: "Descente de gradient : une réflexion mathématique au coeur du Deep Learning",
+      en: "Gradient descent: a mathematical reflection at the core of Deep Learning",
     },
-    date: "2025-09",
-    type: "Article",
+    date: "2025-05",
+    type: "Réflexion IA",
+    language: "FR",
     abstract: {
-      fr: "Pourquoi les benchmarks classiques mentent sur la qualité réelle d'un système RAG, et comment construire un protocole d'évaluation aligné sur l'usage.",
-      en: "Why classical benchmarks lie about real RAG quality, and how to build an evaluation protocol aligned with actual usage.",
+      fr: "Écrit réflexif et scientifique sur la mécanique phare du Deep Learning : fonctionnement mathématique de la descente de gradient, pas constant, backtracking, normes de descente, sensibilité au conditionnement de la Hessienne, méthodes d'accélération et analyse comparative.",
+      en: "Reflective scientific writing on the core mechanism of Deep Learning: mathematical behavior of gradient descent, constant step size, backtracking, descent norms, sensitivity to Hessian conditioning, acceleration methods, and comparative analysis.",
     },
-    url: "#",
-  },
-  {
-    id: "p2",
-    title: {
-      fr: "LLMs appliqués : thèse de fin d'études",
-      en: "Applied LLMs: master's thesis",
-    },
-    date: "2022-06",
-    type: "Rapport",
-    abstract: {
-      fr: "Travail de recherche sur l'adaptation de modèles de langage à des domaines spécialisés via fine-tuning et retrieval augmenté.",
-      en: "Research on adapting language models to specialized domains through fine-tuning and retrieval augmentation.",
-    },
-    url: "#",
+    url: "/reports/descente-gradient.pdf",
   },
   {
     id: "p3",
     title: {
-      fr: "Le rôle de l'ingénieur Data à l'ère des LLMs",
-      en: "The role of the Data Engineer in the LLM era",
+      fr: "Détection de points d'intérêt (PoI) par clustering à Lyon",
+      en: "Detecting Points of Interest (PoI) Using Clustering Algorithms",
     },
-    date: "2025-03",
-    type: "Réflexion IA",
+    date: "2025-06",
+    type: "Research",
+    language: "EN",
     abstract: {
-      fr: "Une réflexion personnelle sur la transformation du métier de data engineer face aux modèles génératifs et aux nouvelles architectures.",
-      en: "A personal reflection on how the data engineering craft is being reshaped by generative models and new architectures.",
+      fr: "La détection de points d'intérêt à Lyon via des données Flickr est ici un cas d'étude servant à comparer rigoureusement les algorithmes de clustering. Le rapport met l'accent sur l'analyse méthodologique (K-Means, DBSCAN, agglomératif, Mean-Shift), la sensibilité aux hyperparamètres, les visualisations et les limites de chaque approche.",
+      en: "In this project, PoI detection in Lyon using Flickr geolocated posts is primarily a pretext for a rigorous comparison of clustering algorithms. The report focuses on methodological benchmarking across K-Means, DBSCAN, Agglomerative Clustering, and Mean-Shift, with emphasis on hyperparameter sensitivity, visualization, and method-specific trade-offs.",
     },
-    url: "#",
-  },
-  {
-    id: "p4",
-    title: {
-      fr: "Architecture lakehouse : retour d'expérience",
-      en: "Lakehouse architecture: lessons learned",
-    },
-    date: "2024-11",
-    type: "Rapport",
-    abstract: {
-      fr: "Bilan d'une migration warehouse vers lakehouse : pièges techniques, choix de gouvernance, ROI réel.",
-      en: "Looking back at a warehouse-to-lakehouse migration: technical pitfalls, governance choices, actual ROI.",
-    },
-    url: "#",
+    url: "/reports/PoI-cluster.pdf",
   },
 ];
