@@ -6,7 +6,11 @@ import { setLang } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 import { cn } from "@/lib/utils";
 
-const SECTIONS = ["about", "experience", "projects", "skills", "thinking", "contact"] as const;
+const SECTIONS = ["about", "skills", "experience", "projects", "humanly", "contact"] as const;
+const OBSERVED_SECTIONS = ["about", "skills", "experience", "projects", "publications", "humanly", "contact"] as const;
+const ACTIVE_SECTION_MAP: Partial<Record<(typeof OBSERVED_SECTIONS)[number], (typeof SECTIONS)[number]>> = {
+  publications: "projects",
+};
 
 export function Navbar() {
   const { t, i18n } = useTranslation();
@@ -20,12 +24,12 @@ export function Navbar() {
     const onScroll = () => {
       setScrolled(window.scrollY > 12);
       let current = "";
-      for (const id of SECTIONS) {
+      for (const id of OBSERVED_SECTIONS) {
         const el = document.getElementById(id);
         if (!el) continue;
         const r = el.getBoundingClientRect();
         if (r.top <= window.innerHeight * 0.4 && r.bottom > window.innerHeight * 0.4) {
-          current = id;
+          current = ACTIVE_SECTION_MAP[id] ?? id;
           break;
         }
       }
