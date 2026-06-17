@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "publications": "Publications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Erwann Lesech",
+    "title": "Data & AI Engineer",
+    "tagline": "I design data pipelines and machine-learning systems that turn raw signals into reliable products — from ingestion to inference, in production.",
+    "cta_projects": "See my projects",
+    "cta_cv": "Download CV",
+    "graph_hint": "Hover or tap a sphere to explore a skill",
+    "panel_default_title": "Skills graph",
+    "panel_default_text": "Each sphere is a skill I work with, grouped by domain and color. Hover or click one to see how I use it and which projects it powers.",
+    "linked_label": "Where I use it"
+  },
+  "about": {
+    "title": "About",
+    "bio": "I'm a Data & AI Engineer who enjoys living at the intersection of solid data engineering and applied machine learning. I care about systems that are observable, reproducible, and genuinely useful — not just demos. Outside of building, I write about LLM evaluation, streaming architectures, and the ethics of AI.",
+    "stats": {
+      "experience": "years of experience",
+      "projects": "shipped projects",
+      "publications": "publications",
+      "stack": "core technologies"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "items": {
+      "dataiku": {
+        "role": "Data & AI Engineer",
+        "company": "Dataiku",
+        "dates": "2023 — Present",
+        "bullets": [
+          "Built streaming and batch pipelines (Spark, Kafka, Airflow) processing tens of millions of events per day.",
+          "Shipped a production RAG assistant on top of internal docs with FastAPI and a vector store, deployed on Kubernetes.",
+          "Introduced infrastructure-as-code with Terraform and standardized CI/CD for ML workloads.",
+          "Mentored two junior engineers on data modeling and MLOps practices."
+        ]
+      },
+      "epita": {
+        "role": "Machine Learning Engineer (Apprenticeship)",
+        "company": "EPITA Research Lab",
+        "dates": "2021 — 2023",
+        "bullets": [
+          "Developed computer-vision models for anomaly detection with PyTorch and scikit-learn.",
+          "Containerized training and inference workloads with Docker on GCP.",
+          "Built internal dashboards in React to expose model metrics to researchers."
+        ]
+      },
+      "research": {
+        "role": "Research Assistant — NLP",
+        "company": "EPITA",
+        "dates": "2020 — 2021",
+        "bullets": [
+          "Explored transformer architectures for French-language text classification.",
+          "Co-authored a technical report on data augmentation for low-resource NLP.",
+          "Implemented reproducible experiment tracking for the team."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "filters": {
+      "all": "All",
+      "ml": "ML / AI",
+      "data": "Data Engineering",
+      "cloud": "Cloud",
+      "devops": "DevOps"
+    },
+    "view_details": "View details",
+    "github": "Source code",
+    "live": "Live demo",
+    "tech": "Tech stack",
+    "items": {
+      "llm-rag": {
+        "title": "LLM RAG Assistant",
+        "description": "A retrieval-augmented assistant that answers questions over private documents with citations.",
+        "details": "An end-to-end RAG system: document ingestion and chunking, embeddings stored in a vector database, a FastAPI inference layer with streaming responses, and a Next.js chat UI. Includes an evaluation harness to track answer faithfulness and retrieval quality over time. Deployed on AWS with autoscaling on Kubernetes."
+      },
+      "streaming-pipeline": {
+        "title": "Real-time Streaming Pipeline",
+        "description": "An event-driven data platform ingesting and transforming millions of events per day.",
+        "details": "Kafka handles ingestion, Spark Structured Streaming performs transformations, and Airflow orchestrates downstream batch jobs. Infrastructure is fully managed with Terraform on AWS, with monitoring and data-quality checks at every stage."
+      },
+      "vision-anomaly": {
+        "title": "Vision Anomaly Detection",
+        "description": "A computer-vision model that flags defects on production lines in near real time.",
+        "details": "Built with PyTorch and classical scikit-learn baselines, packaged in Docker and served on GCP. The system combines an autoencoder reconstruction score with a supervised classifier and exposes a simple review UI for human-in-the-loop labeling."
+      },
+      "churn": {
+        "title": "Churn Prediction Warehouse",
+        "description": "A dbt-modeled warehouse feeding a churn model with automated retraining.",
+        "details": "Raw data is transformed with dbt into clean analytics models, features are materialized in SQL, and a scikit-learn model is retrained on a schedule via Airflow. Predictions are written back for downstream CRM activation."
+      },
+      "infra-platform": {
+        "title": "Internal ML Platform",
+        "description": "A self-service cloud platform for data teams to deploy models and jobs.",
+        "details": "A Kubernetes-based platform provisioned with Terraform, giving teams reproducible environments, secrets management, and one-click deployment of containerized workloads on AWS."
+      },
+      "cicd-mlops": {
+        "title": "MLOps CI/CD Toolkit",
+        "description": "Reusable pipelines for testing, building, and shipping ML services.",
+        "details": "GitHub Actions workflows that lint, test, build Docker images, and deploy to Kubernetes, with Airflow integration for scheduled retraining and rollback strategies for models."
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Filter by domain to highlight related skills. Select a sphere to see details.",
+    "filters": {
+      "all": "All",
+      "ml": "ML / AI",
+      "data": "Data",
+      "cloud": "Cloud",
+      "devops": "DevOps",
+      "languages": "Languages",
+      "frameworks": "Frameworks"
+    },
+    "domains": {
+      "ml": "ML / AI",
+      "data": "Data Engineering",
+      "cloud": "Cloud / Infra",
+      "devops": "DevOps",
+      "languages": "Languages",
+      "frameworks": "Frameworks"
+    },
+    "proficiency": "Proficiency",
+    "my_link": "My connection to this skill",
+    "items": {
+      "pytorch": { "desc": "My go-to framework for deep learning. I've trained vision and NLP models with it, from quick prototypes to production inference." },
+      "llm": { "desc": "I build retrieval-augmented systems and evaluate them rigorously. Prompting, chunking, and grounding are part of my daily work." },
+      "sklearn": { "desc": "The workhorse for classical ML. I rely on it for strong baselines, feature pipelines, and interpretable models." },
+      "spark": { "desc": "I use Spark for large-scale batch and streaming transformations where a single machine just won't cut it." },
+      "airflow": { "desc": "My orchestrator of choice for scheduling, dependencies, and retries across data and ML workflows." },
+      "kafka": { "desc": "The backbone of my event-driven pipelines, decoupling producers from consumers at scale." },
+      "dbt": { "desc": "I model analytics data with dbt to keep transformations versioned, tested, and documented." },
+      "aws": { "desc": "My primary cloud. I deploy pipelines and ML services here with a focus on cost and reliability." },
+      "gcp": { "desc": "Used for training and serving vision models, especially during my research-focused work." },
+      "docker": { "desc": "Everything I ship is containerized for reproducibility — from training jobs to API services." },
+      "k8s": { "desc": "I deploy and scale containerized ML services on Kubernetes with autoscaling and health checks." },
+      "terraform": { "desc": "I manage cloud infrastructure as code so environments are reproducible and reviewable." },
+      "python": { "desc": "My main language for data, ML, and backend work. It's where most of my code lives." },
+      "sql": { "desc": "I think in SQL for analytics modeling, feature engineering, and warehouse work." },
+      "cpp": { "desc": "Used for performance-critical components and during my systems-oriented coursework and research." },
+      "fastapi": { "desc": "My preferred way to expose ML models as fast, typed, async APIs." },
+      "react": { "desc": "I build lightweight UIs and dashboards to make models and metrics accessible to humans." }
+    }
+  },
+  "publications": {
+    "title": "Publications",
+    "read": "Read",
+    "types": {
+      "report": "Report",
+      "article": "Article",
+      "reflection": "AI Reflection"
+    },
+    "items": {
+      "rag-eval": {
+        "title": "Evaluating RAG Systems Beyond Accuracy",
+        "abstract": "A practical framework for measuring faithfulness, retrieval quality, and answer usefulness in production RAG."
+      },
+      "streaming-report": {
+        "title": "Designing Resilient Streaming Pipelines",
+        "abstract": "Lessons learned building Kafka and Spark pipelines that survive failures and backpressure at scale."
+      },
+      "ai-ethics": {
+        "title": "On the Responsibility of AI Engineers",
+        "abstract": "A reflection on the ethical choices we make when shipping models that affect real people."
+      },
+      "anomaly-detection": {
+        "title": "Hybrid Anomaly Detection for Vision",
+        "abstract": "Combining reconstruction-based and supervised approaches for robust industrial defect detection."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project, a question, or just want to say hi? Let's talk.",
+    "social": "Find me online",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Thanks! Your message has been sent.",
+      "error": "Something went wrong. Please try again or email me directly."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built": "Built with Next.js, Three.js & Framer Motion."
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  }
+}

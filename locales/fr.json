@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "about": "À propos",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "publications": "Publications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Erwann Lesech",
+    "title": "Data & AI Engineer",
+    "tagline": "Je conçois des pipelines de données et des systèmes de machine learning qui transforment des signaux bruts en produits fiables — de l'ingestion à l'inférence, en production.",
+    "cta_projects": "Voir mes projets",
+    "cta_cv": "Télécharger le CV",
+    "graph_hint": "Survolez ou touchez une sphère pour explorer une compétence",
+    "panel_default_title": "Graphe de compétences",
+    "panel_default_text": "Chaque sphère est une compétence que j'utilise, regroupée par domaine et par couleur. Survolez ou cliquez pour voir comment je l'utilise et quels projets elle alimente.",
+    "linked_label": "Où je l'utilise"
+  },
+  "about": {
+    "title": "À propos",
+    "bio": "Je suis Data & AI Engineer et j'aime travailler à l'intersection d'une ingénierie de données solide et du machine learning appliqué. J'attache de l'importance aux systèmes observables, reproductibles et réellement utiles — pas seulement aux démos. En dehors du code, j'écris sur l'évaluation des LLM, les architectures de streaming et l'éthique de l'IA.",
+    "stats": {
+      "experience": "ans d'expérience",
+      "projects": "projets livrés",
+      "publications": "publications",
+      "stack": "technologies clés"
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "items": {
+      "dataiku": {
+        "role": "Data & AI Engineer",
+        "company": "Dataiku",
+        "dates": "2023 — Présent",
+        "bullets": [
+          "Construction de pipelines streaming et batch (Spark, Kafka, Airflow) traitant des dizaines de millions d'événements par jour.",
+          "Mise en production d'un assistant RAG sur la documentation interne avec FastAPI et une base vectorielle, déployé sur Kubernetes.",
+          "Introduction de l'infrastructure-as-code avec Terraform et standardisation de la CI/CD pour les charges ML.",
+          "Accompagnement de deux ingénieurs juniors sur la modélisation de données et les pratiques MLOps."
+        ]
+      },
+      "epita": {
+        "role": "Machine Learning Engineer (Alternance)",
+        "company": "Laboratoire de recherche EPITA",
+        "dates": "2021 — 2023",
+        "bullets": [
+          "Développement de modèles de vision par ordinateur pour la détection d'anomalies avec PyTorch et scikit-learn.",
+          "Conteneurisation des entraînements et de l'inférence avec Docker sur GCP.",
+          "Création de tableaux de bord internes en React pour exposer les métriques aux chercheurs."
+        ]
+      },
+      "research": {
+        "role": "Assistant de recherche — NLP",
+        "company": "EPITA",
+        "dates": "2020 — 2021",
+        "bullets": [
+          "Exploration d'architectures transformers pour la classification de texte en français.",
+          "Co-rédaction d'un rapport technique sur l'augmentation de données pour le NLP à faibles ressources.",
+          "Mise en place d'un suivi d'expériences reproductible pour l'équipe."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "filters": {
+      "all": "Tous",
+      "ml": "ML / IA",
+      "data": "Data Engineering",
+      "cloud": "Cloud",
+      "devops": "DevOps"
+    },
+    "view_details": "Voir les détails",
+    "github": "Code source",
+    "live": "Démo en ligne",
+    "tech": "Stack technique",
+    "items": {
+      "llm-rag": {
+        "title": "Assistant RAG LLM",
+        "description": "Un assistant à génération augmentée qui répond à des questions sur des documents privés avec citations.",
+        "details": "Un système RAG de bout en bout : ingestion et découpage des documents, embeddings stockés dans une base vectorielle, une couche d'inférence FastAPI avec réponses en streaming et une interface de chat Next.js. Inclut un dispositif d'évaluation pour suivre la fidélité des réponses et la qualité de récupération. Déployé sur AWS avec autoscaling sur Kubernetes."
+      },
+      "streaming-pipeline": {
+        "title": "Pipeline de streaming temps réel",
+        "description": "Une plateforme de données événementielle ingérant et transformant des millions d'événements par jour.",
+        "details": "Kafka gère l'ingestion, Spark Structured Streaming effectue les transformations et Airflow orchestre les traitements batch en aval. L'infrastructure est entièrement gérée avec Terraform sur AWS, avec supervision et contrôles qualité à chaque étape."
+      },
+      "vision-anomaly": {
+        "title": "Détection d'anomalies par vision",
+        "description": "Un modèle de vision qui détecte les défauts sur les lignes de production en quasi temps réel.",
+        "details": "Construit avec PyTorch et des baselines scikit-learn classiques, packagé dans Docker et servi sur GCP. Le système combine un score de reconstruction par autoencodeur et un classifieur supervisé, avec une interface de revue pour le labeling humain."
+      },
+      "churn": {
+        "title": "Entrepôt de prédiction du churn",
+        "description": "Un entrepôt modélisé avec dbt alimentant un modèle de churn avec réentraînement automatique.",
+        "details": "Les données brutes sont transformées avec dbt en modèles analytiques propres, les features sont matérialisées en SQL et un modèle scikit-learn est réentraîné régulièrement via Airflow. Les prédictions sont réinjectées pour l'activation CRM."
+      },
+      "infra-platform": {
+        "title": "Plateforme ML interne",
+        "description": "Une plateforme cloud en self-service pour déployer modèles et jobs.",
+        "details": "Une plateforme basée sur Kubernetes provisionnée avec Terraform, offrant aux équipes des environnements reproductibles, la gestion des secrets et le déploiement en un clic de charges conteneurisées sur AWS."
+      },
+      "cicd-mlops": {
+        "title": "Boîte à outils CI/CD MLOps",
+        "description": "Des pipelines réutilisables pour tester, construire et livrer des services ML.",
+        "details": "Des workflows GitHub Actions qui lintent, testent, construisent des images Docker et déploient sur Kubernetes, avec intégration Airflow pour le réentraînement planifié et des stratégies de rollback des modèles."
+      }
+    }
+  },
+  "skills": {
+    "title": "Compétences",
+    "subtitle": "Filtrez par domaine pour mettre en évidence les compétences liées. Sélectionnez une sphère pour voir le détail.",
+    "filters": {
+      "all": "Toutes",
+      "ml": "ML / IA",
+      "data": "Data",
+      "cloud": "Cloud",
+      "devops": "DevOps",
+      "languages": "Langages",
+      "frameworks": "Frameworks"
+    },
+    "domains": {
+      "ml": "ML / IA",
+      "data": "Data Engineering",
+      "cloud": "Cloud / Infra",
+      "devops": "DevOps",
+      "languages": "Langages",
+      "frameworks": "Frameworks"
+    },
+    "proficiency": "Maîtrise",
+    "my_link": "Mon lien avec cette compétence",
+    "items": {
+      "pytorch": { "desc": "Mon framework de prédilection pour le deep learning. J'ai entraîné des modèles de vision et de NLP, du prototype rapide à l'inférence en production." },
+      "llm": { "desc": "Je construis des systèmes à génération augmentée et les évalue rigoureusement. Le prompting, le chunking et le grounding font partie de mon quotidien." },
+      "sklearn": { "desc": "L'outil incontournable du ML classique. Je m'en sers pour des baselines solides, des pipelines de features et des modèles interprétables." },
+      "spark": { "desc": "J'utilise Spark pour les transformations batch et streaming à grande échelle, quand une seule machine ne suffit pas." },
+      "airflow": { "desc": "Mon orchestrateur de choix pour la planification, les dépendances et les reprises sur erreur dans les workflows data et ML." },
+      "kafka": { "desc": "La colonne vertébrale de mes pipelines événementiels, qui découple les producteurs des consommateurs à grande échelle." },
+      "dbt": { "desc": "Je modélise les données analytiques avec dbt pour garder des transformations versionnées, testées et documentées." },
+      "aws": { "desc": "Mon cloud principal. J'y déploie pipelines et services ML avec un souci de coût et de fiabilité." },
+      "gcp": { "desc": "Utilisé pour l'entraînement et le service de modèles de vision, surtout pendant mon travail de recherche." },
+      "docker": { "desc": "Tout ce que je livre est conteneurisé pour la reproductibilité — des jobs d'entraînement aux services API." },
+      "k8s": { "desc": "Je déploie et scale des services ML conteneurisés sur Kubernetes avec autoscaling et health checks." },
+      "terraform": { "desc": "Je gère l'infrastructure cloud as code pour des environnements reproductibles et reviewables." },
+      "python": { "desc": "Mon langage principal pour la data, le ML et le backend. C'est là que vit la majorité de mon code." },
+      "sql": { "desc": "Je pense en SQL pour la modélisation analytique, le feature engineering et le travail d'entrepôt." },
+      "cpp": { "desc": "Utilisé pour des composants critiques en performance et pendant mes cours et recherches orientés systèmes." },
+      "fastapi": { "desc": "Ma façon préférée d'exposer des modèles ML via des API rapides, typées et asynchrones." },
+      "react": { "desc": "Je construis des interfaces et tableaux de bord légers pour rendre les modèles et métriques accessibles." }
+    }
+  },
+  "publications": {
+    "title": "Publications",
+    "read": "Lire",
+    "types": {
+      "report": "Rapport",
+      "article": "Article",
+      "reflection": "Réflexion IA"
+    },
+    "items": {
+      "rag-eval": {
+        "title": "Évaluer les systèmes RAG au-delà de la précision",
+        "abstract": "Un cadre pratique pour mesurer la fidélité, la qualité de récupération et l'utilité des réponses en production RAG."
+      },
+      "streaming-report": {
+        "title": "Concevoir des pipelines de streaming résilients",
+        "abstract": "Les leçons tirées de la construction de pipelines Kafka et Spark qui survivent aux pannes et à la contre-pression à grande échelle."
+      },
+      "ai-ethics": {
+        "title": "De la responsabilité des ingénieurs en IA",
+        "abstract": "Une réflexion sur les choix éthiques que nous faisons en mettant en production des modèles qui affectent de vraies personnes."
+      },
+      "anomaly-detection": {
+        "title": "Détection d'anomalies hybride pour la vision",
+        "abstract": "Combiner approches par reconstruction et supervisées pour une détection robuste de défauts industriels."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Un projet, une question, ou juste envie de dire bonjour ? Discutons.",
+    "social": "Me retrouver en ligne",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "sending": "Envoi...",
+      "success": "Merci ! Votre message a bien été envoyé.",
+      "error": "Une erreur est survenue. Réessayez ou écrivez-moi directement."
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "built": "Construit avec Next.js, Three.js & Framer Motion."
+  },
+  "theme": {
+    "toggle": "Changer de thème"
+  }
+}
