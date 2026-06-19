@@ -16,7 +16,7 @@ export function About() {
           className="flex flex-col items-center md:items-start gap-5"
         >
           <div
-            className="relative rounded-2xl overflow-hidden p-[2px]"
+            className="relative rounded-2xl overflow-hidden p-[2px] cursor-pointer"
             style={{
               background: "linear-gradient(135deg, var(--accent), var(--sky))",
               transform: "rotate(-1deg)",
@@ -30,7 +30,11 @@ export function About() {
                   color: "var(--text-secondary)",
                 }}
               >
-                EL
+                <img
+                  src="/images/profile_picture.png"
+                  alt="Photo de Erwann"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
               </div>
             </div>
           </div>
