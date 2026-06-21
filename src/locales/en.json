@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "thinking": "Thinking",
+    "contact": "Contact"
+  },
+  "hero": {
+    "label": "Data & AI Engineer",
+    "firstName": "Erwann",
+    "lastName": "Lesech",
+    "tagline": "Based in Paris · Open to opportunities",
+    "typewriter": [
+      "I build intelligent data systems.",
+      "I turn raw data into decisions.",
+      "I engineer AI pipelines at scale."
+    ],
+    "viewProjects": "View my projects",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About me",
+    "openToWork": "Open to work",
+    "bio": [
+      "I'm a Data & AI Engineer based in Paris, designing data pipelines and machine learning systems that ship to production — from prototype to scale.",
+      "My work blends software engineering, cloud infrastructure (GCP, AWS) and applied AI, with a particular focus on LLMs, data orchestration and distributed architectures.",
+      "I trained between France and Ireland, which gave me a pragmatic, collaborative way of working with technical teams.",
+      "Today I'm looking to apply these skills with teams that want to turn data into measurable impact."
+    ]
+  },
+  "passions": {
+    "title": "Outside the code",
+    "subtitle": "Because engineers are more than their stack."
+  },
+  "experience": {
+    "title": "Experience",
+    "education": "Education"
+  },
+  "projects": {
+    "title": "Projects",
+    "filters": {
+      "all": "All",
+      "ai": "ML / AI",
+      "data": "Data Engineering",
+      "cloud": "Cloud",
+      "devops": "DevOps",
+      "fullstack": "Full Stack"
+    },
+    "viewDetails": "View details →",
+    "close": "Close"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Hover to explore",
+    "prompt": "← Hover a skill to explore",
+    "usedIn": "Used in:",
+    "filters": {
+      "all": "All",
+      "fullstack": "Full Stack",
+      "ai": "AI/ML",
+      "data": "Data Engineering",
+      "tools": "Tools",
+      "platforms": "Platforms"
+    }
+  },
+  "thinking": {
+    "title": "Thinking",
+    "subtitle": "Reports, reflexive writings, and thoughts on AI & Data.",
+    "read": "Read →",
+    "recommendations": "My recommendations"
+  },
+  "contact": {
+    "title": "Let's build something.",
+    "intro": "Open to opportunities, collaborations and discussions. Feel free to reach out.",
+    "available": "Available for freelance / full-time",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send message →",
+    "sending": "Sending…",
+    "success": "Message sent! I'll get back to you soon 🚀",
+    "error": "Something went wrong. Try emailing me directly."
+  },
+  "footer": {
+    "rights": "© 2026 Erwann Lesech. All rights reserved."
+  }
+}
