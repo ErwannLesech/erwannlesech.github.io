@@ -6,9 +6,9 @@ import { useLang } from "@/lib/useLang";
 import { toast } from "sonner";
 
 const CONTACT_LINKS = [
-  { Icon: Github, label: "GitHub", value: "github.com/erwannlesech", href: "https://github.com/" },
-  { Icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/erwannlesech", href: "https://www.linkedin.com/" },
-  { Icon: Mail, label: "Email", value: "hello@erwann.dev", href: "mailto:hello@erwann.dev" },
+  { Icon: Github, label: "GitHub", value: "github.com/ErwannLesech", href: "https://github.com/ErwannLesech" },
+  { Icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/erwann-lesech", href: "https://www.linkedin.com/in/erwann-lesech/" },
+  { Icon: Mail, label: "Email", value: "lesech.erwann@gmail.com", href: "mailto:lesech.erwann@gmail.com" },
 ];
 
 export function Contact() {
@@ -54,15 +54,19 @@ export function Contact() {
 
   return (
     <Section id="contact" title={t("contact.title")}>
-      <div className="grid md:grid-cols-[2fr_3fr] gap-10">
-        <div>
-          <p className="text-text-secondary leading-relaxed">{t("contact.intro")}</p>
-          <div className="mt-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-pill border border-border-subtle bg-bg-card">
-            <span className="size-2 rounded-full bg-green-500" style={{ animation: "pulse-dot 2s ease-out infinite" }} />
-            <span className="text-xs text-text-secondary">{t("contact.available")}</span>
-          </div>
-          <div className="mt-3 inline-flex items-center gap-1.5 text-sm text-text-secondary">
-            <MapPin size={14} /> Paris, France
+      <div className="grid md:grid-cols-[2fr_3fr] gap-10 md:items-end">
+        <div className="flex flex-col justify-between h-full">
+          <div>
+            <p className="text-text-secondary leading-relaxed">{t("contact.intro")}</p>
+            <div className="mt-5 flex flex-col gap-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-pill border border-border-subtle bg-bg-card w-fit">
+                <span className="size-2 rounded-full bg-green-500" style={{ animation: "pulse-dot 2s ease-out infinite" }} />
+                <span className="text-xs text-text-secondary">{t("contact.available")}</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-sm text-text-secondary px-3">
+                <MapPin size={14} /> {t("contact.location")}
+              </div>
+            </div>
           </div>
 
           <div className="mt-6 space-y-3">
