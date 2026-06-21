@@ -11,7 +11,7 @@
     "label": "Data & AI Engineer",
     "firstName": "Erwann",
     "lastName": "Lesech",
-    "tagline": "Basé à Paris · Ouvert aux opportunités",
+    "tagline": "Basé à Lyon, disponible partout en France et en Suisse.",
     "typewriter": [
       "Je conçois des systèmes de données intelligents.",
       "Je transforme les données brutes en décisions.",
@@ -24,7 +24,7 @@
     "title": "À propos",
     "openToWork": "Ouvert aux opportunités",
     "bio": [
-      "Ingénieur Data & IA basé à Paris, je conçois des pipelines de données et des systèmes de machine learning en production — du prototype au déploiement à grande échelle.",
+      "Ingénieur Data & IA basé à Lyon, je conçois des pipelines de données et des systèmes de machine learning en production, du prototype au déploiement à grande échelle.",
       "Mon parcours mêle ingénierie logicielle, infrastructure cloud (GCP, AWS) et modélisation IA, avec une expertise particulière sur les LLMs, l'orchestration de données et les architectures distribuées.",
       "J'ai eu la chance de me former entre la France et l'Irlande, ce qui m'a donné une approche pragmatique et collaborative du travail technique.",
       "Aujourd'hui, je cherche à mettre ces compétences au service d'équipes qui veulent transformer la donnée en impact mesurable."
@@ -32,7 +32,7 @@
   },
   "passions": {
     "title": "En dehors du code",
-    "subtitle": "Parce qu'un ingénieur, c'est plus que sa stack."
+    "subtitle": "Parce qu'un ingénieur, c'est plus que sa stack, c'est une personne avec des passions et des curiosités.",
   },
   "experience": {
     "title": "Expérience",

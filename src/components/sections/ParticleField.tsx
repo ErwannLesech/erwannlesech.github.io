@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useTheme } from "@/lib/theme";
 
 interface Particle {
   x: number;
@@ -9,10 +10,19 @@ interface Particle {
   isOrange: boolean;
 }
 
+interface ParticlePalette {
+  blue: string;
+  blueShadow: string;
+  orange: string;
+  orangeShadow: string;
+  line: string;
+}
+
 export function ParticleField() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number>(0);
   const mouseRef = useRef<{ x: number; y: number; active: boolean }>({ x: -9999, y: -9999, active: false });
+  const { theme } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -22,6 +32,22 @@ export function ParticleField() {
     }
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+
+    const palette: ParticlePalette = theme === "light"
+      ? {
+          blue: "rgba(9, 79, 126, 0.7)",
+          blueShadow: "rgba(8, 47, 73, 0.35)",
+          orange: "rgba(190, 55, 10, 0.72)",
+          orangeShadow: "rgba(190, 55, 10, 0.4)",
+          line: "rgba(10, 14, 22, 0.30)",
+        }
+      : {
+          blue: "rgba(56, 189, 248, 0.55)",
+          blueShadow: "rgba(56, 189, 248, 0.35)",
+          orange: "rgba(249, 115, 22, 0.55)",
+          orangeShadow: "rgba(249, 115, 22, 0.6)",
+          line: "rgba(226, 232, 240, 0.22)",
+        };
 
     let width = 0;
     let height = 0;
@@ -92,12 +118,12 @@ export function ParticleField() {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         if (p.isOrange) {
-          ctx.fillStyle = "rgba(249, 115, 22, 0.55)";
-          ctx.shadowColor = "rgba(249, 115, 22, 0.6)";
+          ctx.fillStyle = palette.orange;
+          ctx.shadowColor = palette.orangeShadow;
           ctx.shadowBlur = 8;
         } else {
-          ctx.fillStyle = "rgba(56, 189, 248, 0.55)";
-          ctx.shadowColor = "rgba(56, 189, 248, 0.35)";
+          ctx.fillStyle = palette.blue;
+          ctx.shadowColor = palette.blueShadow;
           ctx.shadowBlur = 4;
         }
         ctx.fill();
@@ -114,10 +140,7 @@ export function ParticleField() {
           const d2 = dx * dx + dy * dy;
           if (d2 < 110 * 110) {
             const alpha = (1 - Math.sqrt(d2) / 110) * 0.25;
-            const orange = a.isOrange || b.isOrange;
-            ctx.strokeStyle = orange
-              ? `rgba(249, 115, 22, ${alpha})`
-              : `rgba(56, 189, 248, ${alpha * 0.8})`;
+            ctx.strokeStyle = palette.line.replace("0.22", String(alpha));
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
@@ -137,7 +160,7 @@ export function ParticleField() {
       canvas.removeEventListener("mousemove", onMove);
       canvas.removeEventListener("mouseleave", onLeave);
     };
-  }, []);
+  }, [theme]);
 
   return (
     <canvas
