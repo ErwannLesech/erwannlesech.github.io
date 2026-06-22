@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "about": "À propos",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "thinking": "Réflexions",
+    "contact": "Contact"
+  },
+  "hero": {
+    "label": "Data & AI Engineer",
+    "firstName": "Erwann",
+    "lastName": "Lesech",
+    "tagline": "Basé à Lyon, disponible partout en France et en Suisse.",
+    "typewriter": [
+      "Je conçois des systèmes de données intelligents.",
+      "Je transforme les données brutes en décisions.",
+      "Je construis des pipelines IA à grande échelle."
+    ],
+    "viewProjects": "Voir mes projets",
+    "downloadCV": "Télécharger CV"
+  },
+  "about": {
+    "title": "À propos",
+    "openToWork": "Ouvert aux opportunités",
+    "bio": [
+      "Ingénieur Data & IA basé à Lyon, je conçois des pipelines de données et des systèmes de machine learning en production, du prototype au déploiement à grande échelle.",
+      "Mon parcours mêle ingénierie logicielle, infrastructure cloud (GCP, AWS) et modélisation IA, avec une expertise particulière sur les LLMs, l'orchestration de données et les architectures distribuées.",
+      "J'ai eu la chance de me former entre la France et l'Irlande, ce qui m'a donné une approche pragmatique et collaborative du travail technique.",
+      "Aujourd'hui, je cherche à mettre ces compétences au service d'équipes qui veulent transformer la donnée en impact mesurable."
+    ]
+  },
+  "passions": {
+    "title": "En dehors du code",
+    "subtitle": "Parce qu'un ingénieur, c'est plus que sa stack, c'est une personne avec des passions et des curiosités.",
+  },
+  "experience": {
+    "title": "Expérience",
+    "education": "Formation"
+  },
+  "projects": {
+    "title": "Projets",
+    "filters": {
+      "all": "Tous",
+      "ai": "ML / IA",
+      "data": "Data Engineering",
+      "cloud": "Cloud",
+      "devops": "DevOps",
+      "fullstack": "Full Stack"
+    },
+    "viewDetails": "Voir détails →",
+    "close": "Fermer"
+  },
+  "skills": {
+    "title": "Compétences",
+    "subtitle": "Hover pour explorer",
+    "prompt": "← Survolez une compétence",
+    "usedIn": "Utilisé dans :",
+    "filters": {
+      "all": "Toutes",
+      "fullstack": "Full Stack",
+      "ai": "AI/ML",
+      "data": "Data Engineering",
+      "tools": "Outils",
+      "platforms": "Plateformes"
+    }
+  },
+  "thinking": {
+    "title": "Réflexions",
+    "subtitle": "Rapports, écrits réflexifs, et pensées sur l'IA & la Data.",
+    "read": "Lire →",
+    "recommendations": "Mes recommandations"
+  },
+  "contact": {
+    "title": "Construisons quelque chose.",
+    "intro": "Ouvert aux opportunités, collaborations et discussions. N'hésitez pas à me contacter.",
+    "available": "Disponible pour freelance / CDI",
+    "name": "Nom",
+    "email": "Email",
+    "subject": "Sujet",
+    "message": "Message",
+    "send": "Envoyer le message →",
+    "sending": "Envoi…",
+    "success": "Message envoyé ! Je vous réponds bientôt 🚀",
+    "error": "Une erreur est survenue. Contactez-moi directement par email."
+  },
+  "footer": {
+    "rights": "© 2026 Erwann Lesech. Tous droits réservés."
+  }
+}
