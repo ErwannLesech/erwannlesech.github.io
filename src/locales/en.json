@@ -1,52 +1,55 @@
 {
   "nav": {
     "about": "About",
-    "experience": "Experience",
+    "experience": "Experiences",
     "projects": "Projects",
+    "publications": "Publications",
     "skills": "Skills",
-    "thinking": "Thinking",
+    "humanly": "Humanly",
     "contact": "Contact"
   },
   "hero": {
     "label": "Data & AI Engineer",
     "firstName": "Erwann",
     "lastName": "Lesech",
-    "tagline": "Based in Paris · Open to opportunities",
+    "tagline": "Based in Lyon, available across France and Switzerland.",
     "typewriter": [
       "I build intelligent data systems.",
       "I turn raw data into decisions.",
       "I engineer AI pipelines at scale."
     ],
     "viewProjects": "View my projects",
-    "downloadCV": "Download CV"
+    "downloadCV": "Download resume"
   },
   "about": {
     "title": "About me",
     "openToWork": "Open to work",
     "bio": [
-      "I'm a Data & AI Engineer based in Paris, designing data pipelines and machine learning systems that ship to production — from prototype to scale.",
-      "My work blends software engineering, cloud infrastructure (GCP, AWS) and applied AI, with a particular focus on LLMs, data orchestration and distributed architectures.",
-      "I trained between France and Ireland, which gave me a pragmatic, collaborative way of working with technical teams.",
-      "Today I'm looking to apply these skills with teams that want to turn data into measurable impact."
+      "An EPITA graduate engineer, I am above all someone who likes to understand things deeply and do them well, whether in code, in a team project, or in a new idea that keeps me busy on weekends.",
+      "I am the kind of person who sets challenges for himself: top of my class, French swimming championships, personal projects started out of pure curiosity. Not for performance alone, but because I get bored quickly when I stop improving.",
+      "I had the opportunity to study in Ireland, which taught me to work in varied contexts and adapt quickly. It was, of course, there that I was able to perfect my English and discover other cultures.",
+      "What people usually remember about me: I am proactive, committed, persistent, and I deliver. I am looking for a team where these qualities matter as much as technical skills."
     ]
   },
   "passions": {
     "title": "Outside the code",
-    "subtitle": "Because engineers are more than their stack."
+    "subtitle": "Because an engineer is more than a stack: a person with passions and curiosity."
   },
   "experience": {
     "title": "Experience",
+    "professional": "Professional Experience",
     "education": "Education"
   },
   "projects": {
-    "title": "Projects",
+    "title": "Academic & Personal Projects",
     "filters": {
       "all": "All",
-      "ai": "ML / AI",
-      "data": "Data Engineering",
-      "cloud": "Cloud",
-      "devops": "DevOps",
-      "fullstack": "Full Stack"
+      "agentic_ai": "Agentic AI",
+      "ml_research": "ML Research",
+      "data_science": "Data Science",
+      "backend_cloud": "Backend & Cloud",
+      "systems_devops": "Systems & DevOps",
+      "product": "Product"
     },
     "viewDetails": "View details →",
     "close": "Close"
@@ -54,34 +57,44 @@
   "skills": {
     "title": "Skills",
     "subtitle": "Hover to explore",
-    "prompt": "← Hover a skill to explore",
+    "prompt": "← Click or hover a skill to see details",
     "usedIn": "Used in:",
     "filters": {
       "all": "All",
-      "fullstack": "Full Stack",
-      "ai": "AI/ML",
-      "data": "Data Engineering",
-      "tools": "Tools",
-      "platforms": "Platforms"
+      "ai_ml": "AI / ML",
+      "data_backend": "Data & Backend",
+      "infra_devops": "Infra & DevOps",
+      "frontend": "Frontend",
+      "systems": "Systems"
     }
   },
+  "publications": {
+    "title": "Publications",
+    "read": "Read →"
+  },
+  "humanly": {
+    "title": "Humanly",
+    "subtitle": "My passions and what people say about me.",
+    "recommendations": "My recommendations"
+  },
   "thinking": {
-    "title": "Thinking",
+    "title": "Reflections",
     "subtitle": "Reports, reflexive writings, and thoughts on AI & Data.",
     "read": "Read →",
     "recommendations": "My recommendations"
   },
   "contact": {
-    "title": "Let's build something.",
+    "title": "Let's Work Together !",
     "intro": "Open to opportunities, collaborations and discussions. Feel free to reach out.",
     "available": "Available for freelance / full-time",
+    "location": "Lyon, France & Switzerland",
     "name": "Name",
     "email": "Email",
     "subject": "Subject",
     "message": "Message",
     "send": "Send message →",
     "sending": "Sending…",
-    "success": "Message sent! I'll get back to you soon 🚀",
+    "success": "Message sent! I'll get back to you very soon !",
     "error": "Something went wrong. Try emailing me directly."
   },
   "footer": {
