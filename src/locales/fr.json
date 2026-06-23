@@ -1,10 +1,11 @@
 {
   "nav": {
     "about": "À propos",
-    "experience": "Expérience",
+    "experience": "Expériences",
     "projects": "Projets",
+    "publications": "Publications",
     "skills": "Compétences",
-    "thinking": "Réflexions",
+    "humanly": "Côté humain",
     "contact": "Contact"
   },
   "hero": {
@@ -18,52 +19,65 @@
       "Je construis des pipelines IA à grande échelle."
     ],
     "viewProjects": "Voir mes projets",
-    "downloadCV": "Télécharger CV"
+    "downloadCV": "Télécharger mon CV"
   },
   "about": {
     "title": "À propos",
     "openToWork": "Ouvert aux opportunités",
     "bio": [
-      "Ingénieur Data & IA basé à Lyon, je conçois des pipelines de données et des systèmes de machine learning en production, du prototype au déploiement à grande échelle.",
-      "Mon parcours mêle ingénierie logicielle, infrastructure cloud (GCP, AWS) et modélisation IA, avec une expertise particulière sur les LLMs, l'orchestration de données et les architectures distribuées.",
-      "J'ai eu la chance de me former entre la France et l'Irlande, ce qui m'a donné une approche pragmatique et collaborative du travail technique.",
-      "Aujourd'hui, je cherche à mettre ces compétences au service d'équipes qui veulent transformer la donnée en impact mesurable."
+      "Ingénieur diplômé de l'EPITA, je suis avant tout quelqu'un qui aime comprendre les choses en profondeur et les faire bienque,  ce soit dans le code, dans un projet d'équipe ou dans une nouvelle idée qui m'obsède le week-end.",
+      "Je suis du genre à me lancer des défis : major de promotion, championnats de France de natation, projets perso lancés par pure curiosité... Non par goût de la performance pour elle-même, mais parce que je m'ennuie vite quand je ne progresse pas.",
+      "J'ai eu la chance d'étudier en Irlande, ce qui m'a appris à travailler dans des contextes variés et à m'adapter vite. C'est bien évidemment là-bas que j'ai pu perfectionner mon anglais et découvrir d'autres cultures.",
+      "Ce que les gens retiennent généralement de moi : je suis proactif, je m'investis, je persévère et je livre. Je cherche une équipe où ces qualités ont autant de valeur que les compétences techniques."
     ]
   },
   "passions": {
     "title": "En dehors du code",
-    "subtitle": "Parce qu'un ingénieur, c'est plus que sa stack, c'est une personne avec des passions et des curiosités.",
+    "subtitle": "Parce qu'un ingénieur, c'est plus que sa stack, c'est une personne avec des passions et des curiosités."
   },
   "experience": {
     "title": "Expérience",
+    "professional": "Expériences Professionnelles",
     "education": "Formation"
   },
   "projects": {
-    "title": "Projets",
+    "title": "Projets Académiques & Personnels",
     "filters": {
       "all": "Tous",
-      "ai": "ML / IA",
-      "data": "Data Engineering",
-      "cloud": "Cloud",
-      "devops": "DevOps",
-      "fullstack": "Full Stack"
+      "agentic_ai": "IA Agentique",
+      "ml_research": "Recherche ML",
+      "data_science": "Data Science",
+      "backend_cloud": "Backend & Cloud",
+      "systems_devops": "Systèmes & DevOps",
+      "product": "Produit"
     },
     "viewDetails": "Voir détails →",
     "close": "Fermer"
   },
   "skills": {
     "title": "Compétences",
+    "description": "Langages, outils et frameworks maîtrisés.",
+    "graphInfo": "Graphe interactif — déplacez-vous librement dans la représentation",
     "subtitle": "Hover pour explorer",
-    "prompt": "← Survolez une compétence",
+    "prompt": "← Cliquez ou survolez une compétence pour voir les détails",
     "usedIn": "Utilisé dans :",
     "filters": {
       "all": "Toutes",
-      "fullstack": "Full Stack",
-      "ai": "AI/ML",
-      "data": "Data Engineering",
-      "tools": "Outils",
-      "platforms": "Plateformes"
+      "ai_ml": "AI / ML",
+      "data_backend": "Data & Backend",
+      "infra_devops": "Infra & DevOps",
+      "frontend": "Frontend",
+      "systems": "Systèmes"
     }
+  },
+  "publications": {
+    "title": "Publications",
+    "read": "Lire →"
+  },
+  "humanly": {
+    "title": "Côté humain",
+    "subtitle": "Mes passions et ce que les gens disent de moi.",
+    "recommendations": "Mes recommandations"
   },
   "thinking": {
     "title": "Réflexions",
@@ -72,16 +86,17 @@
     "recommendations": "Mes recommandations"
   },
   "contact": {
-    "title": "Construisons quelque chose.",
+    "title": "Travaillons Ensemble !",
     "intro": "Ouvert aux opportunités, collaborations et discussions. N'hésitez pas à me contacter.",
     "available": "Disponible pour freelance / CDI",
+    "location": "Lyon, France & Suisse",
     "name": "Nom",
     "email": "Email",
     "subject": "Sujet",
     "message": "Message",
     "send": "Envoyer le message →",
     "sending": "Envoi…",
-    "success": "Message envoyé ! Je vous réponds bientôt 🚀",
+    "success": "Message envoyé ! Je vous réponds très vite !",
     "error": "Une erreur est survenue. Contactez-moi directement par email."
   },
   "footer": {
