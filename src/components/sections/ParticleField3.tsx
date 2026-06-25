@@ -8,15 +8,14 @@ interface Particle {
   vy: number;
   r: number;
   isOrange: boolean;
-  brightness: "dim" | "normal" | "bright";
 }
 
 interface ParticlePalette {
-  blue: { dim: string; normal: string; bright: string };
-  orange: { dim: string; normal: string; bright: string };
+  blue: string;
+  blueShadow: string;
+  orange: string;
+  orangeShadow: string;
   line: string;
-  drift: number;
-  time: number;
 }
 
 export function ParticleField() {
@@ -36,30 +35,18 @@ export function ParticleField() {
 
     const palette: ParticlePalette = theme === "light"
       ? {
-          blue: {
-            dim: "rgba(9, 79, 126, 0.3)",
-            normal: "rgba(9, 79, 126, 0.6)",
-            bright: "rgba(9, 79, 126, 0.95)",
-          },
-          orange: {
-            dim: "rgba(190, 55, 10, 0.3)",
-            normal: "rgba(190, 55, 10, 0.65)",
-            bright: "rgba(190, 55, 10, 0.95)",
-          },
-          line: "rgba(25, 35, 55, 0.15)",
+          blue: "rgba(9, 79, 126, 0.7)",
+          blueShadow: "rgba(8, 47, 73, 0.35)",
+          orange: "rgba(190, 55, 10, 0.72)",
+          orangeShadow: "rgba(190, 55, 10, 0.4)",
+          line: "rgba(25, 35, 55, 0.22)",
         }
       : {
-          blue: {
-            dim: "rgba(56, 189, 248, 0.2)",
-            normal: "rgba(56, 189, 248, 0.55)",
-            bright: "rgba(56, 189, 248, 0.95)",
-          },
-          orange: {
-            dim: "rgba(249, 115, 22, 0.2)",
-            normal: "rgba(249, 115, 22, 0.55)",
-            bright: "rgba(249, 115, 22, 0.95)",
-          },
-          line: "rgba(226, 232, 240, 0.08)",
+          blue: "rgba(56, 189, 248, 0.55)",
+          blueShadow: "rgba(56, 189, 248, 0.35)",
+          orange: "rgba(249, 115, 22, 0.55)",
+          orangeShadow: "rgba(249, 115, 22, 0.6)",
+          line: "rgba(226, 232, 240, 0.05)",
         };
 
     let width = 0;
@@ -75,30 +62,15 @@ export function ParticleField() {
       canvas.height = height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      const target = Math.min(160, Math.floor((width * height) / 7500));
-      particles = Array.from({ length: target }, () => {
-        const brightnessRoll = Math.random();
-        let brightness: "dim" | "normal" | "bright";
-        if (brightnessRoll < 0.15) {
-          brightness = "bright"; // 15% d'étoiles brillantes
-        } else if (brightnessRoll < 0.35) {
-          brightness = "normal"; // 20% normales
-        } else {
-          brightness = "dim"; // 65% sombres
-        }
-
-        return {
-          x: Math.random() * width,
-          y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.25,
-          vy: 0.1 + Math.random() * 0.2,
-          r: brightness === "bright" ? 1.2 + Math.random() * 1.4 : 0.8 + Math.random() * 1.2,
-          isOrange: Math.random() < 0.2,
-          brightness,
-          drift: (Math.random() - 0.5) * 0.5,
-          time: Math.random() * Math.PI * 2,
-        };
-      });
+      const target = Math.min(180, Math.floor((width * height) / 6000));
+      particles = Array.from({ length: target }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: 0.1 + Math.random() * 0.2,
+        r: 0.6 + Math.random() * 1.6,
+        isOrange: Math.random() < 0.18,
+      }));
     };
 
     resize();
@@ -138,9 +110,6 @@ export function ParticleField() {
         p.vy = p.vy * 0.97 + 0.005;
         p.x += p.vx;
         p.y += p.vy;
-        p.time += 0.01;
-        const driftOffset = Math.sin(p.time) * p.drift * 0.15;
-        p.x += driftOffset;
         if (p.x < -10) p.x = width + 10;
         if (p.x > width + 10) p.x = -10;
         if (p.y > height + 10) { p.y = -10; p.x = Math.random() * width; }
@@ -149,27 +118,13 @@ export function ParticleField() {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         if (p.isOrange) {
-          ctx.fillStyle = palette.orange[p.brightness];
-          if (p.brightness === "bright") {
-            ctx.shadowColor = "rgba(249, 115, 22, 0.6)";
-            ctx.shadowBlur = 12;
-          } else if (p.brightness === "normal") {
-            ctx.shadowColor = "rgba(249, 115, 22, 0.3)";
-            ctx.shadowBlur = 6;
-          } else {
-            ctx.shadowBlur = 0;
-          }
+          ctx.fillStyle = palette.orange;
+          ctx.shadowColor = palette.orangeShadow;
+          ctx.shadowBlur = 8;
         } else {
-          ctx.fillStyle = palette.blue[p.brightness];
-          if (p.brightness === "bright") {
-            ctx.shadowColor = "rgba(56, 189, 248, 0.6)";
-            ctx.shadowBlur = 12;
-          } else if (p.brightness === "normal") {
-            ctx.shadowColor = "rgba(56, 189, 248, 0.3)";
-            ctx.shadowBlur = 6;
-          } else {
-            ctx.shadowBlur = 0;
-          }
+          ctx.fillStyle = palette.blue;
+          ctx.shadowColor = palette.blueShadow;
+          ctx.shadowBlur = 4;
         }
         ctx.fill();
         ctx.shadowBlur = 0;
@@ -183,9 +138,9 @@ export function ParticleField() {
           const dx = a.x - b.x;
           const dy = a.y - b.y;
           const d2 = dx * dx + dy * dy;
-          if (d2 < 70 * 70) {
-            const alpha = (1 - Math.sqrt(d2) / 70) * 0.3;
-            ctx.strokeStyle = palette.line.replace("0.08", String(alpha));
+          if (d2 < 110 * 110) {
+            const alpha = (1 - Math.sqrt(d2) / 110) * 0.25;
+            ctx.strokeStyle = palette.line.replace("0.22", String(alpha));
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
