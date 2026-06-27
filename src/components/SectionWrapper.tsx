@@ -7,17 +7,19 @@ export function Section({
   subtitle,
   children,
   fullHeight = true,
+  className,
 }: {
   id: string;
   title?: string;
   subtitle?: string;
   children: ReactNode;
   fullHeight?: boolean;
+  className?: string;
 }) {
   return (
     <section
       id={id}
-      className={`relative w-full px-6 py-24 md:py-32 ${fullHeight ? "min-h-screen" : ""}`}
+      className={`relative w-full px-6 py-24 md:py-32 ${fullHeight ? "min-h-screen" : ""} ${className ?? ""}`}
     >
       <div className="mx-auto max-w-6xl">
         {title && (
