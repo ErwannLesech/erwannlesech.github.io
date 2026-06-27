@@ -2,9 +2,9 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const SOCIALS = [
-  { href: "https://github.com/", label: "GitHub", Icon: Github },
-  { href: "https://www.linkedin.com/", label: "LinkedIn", Icon: Linkedin },
-  { href: "mailto:hello@example.com", label: "Email", Icon: Mail },
+  { href: "https://github.com/ErwannLesech", label: "GitHub", Icon: Github },
+  { href: "https://www.linkedin.com/in/erwann-lesech/", label: "LinkedIn", Icon: Linkedin },
+  { href: "mailto:lesech.erwann@gmail.com", label: "Email", Icon: Mail },
 ];
 
 export function Footer() {

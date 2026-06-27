@@ -29,20 +29,24 @@ export function CustomCursor() {
   if (!enabled) return null;
 
   return (
-    <motion.div
-      className="pointer-events-none fixed top-0 left-0 z-[9999] rounded-full mix-blend-difference"
+    <div
+      className="pointer-events-none fixed left-0 top-0 z-[9999]"
       style={{
-        background: "var(--accent)",
-        boxShadow: "0 0 16px var(--accent-glow)",
+        transform: `translate3d(${pos.x}px, ${pos.y}px, 0)`,
       }}
-      animate={{
-        x: pos.x - (hover ? 16 : 6),
-        y: pos.y - (hover ? 16 : 6),
-        width: hover ? 32 : 12,
-        height: hover ? 32 : 12,
-        opacity: hover ? 0.6 : 1,
-      }}
-      transition={{ type: "spring", stiffness: 500, damping: 30, mass: 0.4 }}
-    />
+    >
+      <motion.div
+        className="h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-difference"
+        style={{
+          background: "var(--accent)",
+          boxShadow: "0 0 16px var(--accent-glow)",
+        }}
+        animate={{
+          scale: hover ? 2.667 : 1,
+          opacity: hover ? 0.6 : 1,
+        }}
+        transition={{ duration: 0.12, ease: "easeOut" }}
+      />
+    </div>
   );
 }
