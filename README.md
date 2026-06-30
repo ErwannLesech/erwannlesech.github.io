@@ -16,10 +16,8 @@ Bienvenue sur mon portfolio personnel.
 
 ### Build & Outils
 - **Vite** - Build tool et dev server
-- **TanStack Start** - Framework full-stack React
 - **ESLint** - Linter
 - **Prettier** - Formateur de code
-- **Bun** - Package manager et runtime
 
 ### Autres
 - **i18n** - Internationalisation
@@ -29,10 +27,8 @@ Bienvenue sur mon portfolio personnel.
 
 Avant de commencer, assurez-vous d'avoir installé :
 
-- **Node.js** (v18 ou supérieur) ou **Bun**
+- **Node.js** (v18 ou supérieur)
 - **Git**
-
-> **Note** : Ce projet est configuré pour utiliser **Bun** (voir `bunfig.toml`). Si vous n'avez pas Bun, vous pouvez toujours utiliser npm/yarn/pnpm.
 
 ## Installation et Mise en Route
 
@@ -45,31 +41,13 @@ cd erwannlesech.github.io
 
 ### 2. Installer les dépendances
 
-#### Avec Bun (recommandé)
-```bash
-bun install
-```
-
-#### Avec npm
 ```bash
 npm install
-```
-
-#### Avec yarn
-```bash
-yarn install
-```
-
-#### Avec pnpm
-```bash
-pnpm install
 ```
 
 ### 3. Démarrer le serveur de développement
 
 ```bash
-bun run dev
-# ou avec npm
 npm run dev
 ```
 
@@ -79,12 +57,12 @@ Le site sera accessible à : **http://localhost:5173** (ou le port affiché dans
 
 | Commande | Description |
 |----------|-------------|
-| `bun run dev` | Lance le serveur de développement avec hot reload |
-| `bun run build` | Construit l'application pour la production |
-| `bun run build:dev` | Construit en mode développement |
-| `bun run preview` | Prévisualise la build de production en local |
-| `bun run lint` | Lance ESLint pour vérifier la qualité du code |
-| `bun run format` | Formate le code avec Prettier |
+| `npm run dev` | Lance le serveur de développement avec hot reload |
+| `npm run build` | Construit l'application pour la production |
+| `npm run build:dev` | Construit en mode développement |
+| `npm run preview` | Prévisualise la build de production en local |
+| `npm run lint` | Lance ESLint pour vérifier la qualité du code |
+| `npm run format` | Formate le code avec Prettier |
 
 ## Structure du projet
 
@@ -105,13 +83,10 @@ erwannlesech.github.io/
 │   ├── locales/             # Fichiers i18n (en.json, fr.json)
 │   ├── styles.css           # Styles globaux
 │   ├── router.tsx           # Configuration du routeur
-│   ├── server.ts            # Configuration du serveur SSR
-│   └── start.ts             # Point d'entrée
+│   └── main.tsx             # Point d'entrée
 ├── vite.config.ts           # Configuration Vite
-├── tailwind.config.ts       # Configuration Tailwind
 ├── tsconfig.json            # Configuration TypeScript
 ├── eslint.config.js         # Configuration ESLint
-├── bunfig.toml              # Configuration Bun
 └── package.json             # Dépendances du projet
 ```
 
@@ -157,7 +132,7 @@ Modifiez ces fichiers pour ajouter ou changer les traductions.
 ### Build pour la production
 
 ```bash
-bun run build
+npm run build
 ```
 
 Cela générera un dossier `dist/` contenant les fichiers optimisés prêts pour le déploiement.
@@ -165,8 +140,8 @@ Cela générera un dossier `dist/` contenant les fichiers optimisés prêts pour
 ### Prévisualisation locale
 
 ```bash
-bun run build
-bun run preview
+npm run build
+npm run preview
 ```
 
 ## Environnement (VITE_* variables)
