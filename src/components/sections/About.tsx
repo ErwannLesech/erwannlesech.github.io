@@ -22,7 +22,7 @@ export function About() {
               transform: "rotate(-1deg)",
             }}
           >
-            <div className="rounded-[14px] overflow-hidden bg-bg-card w-[260px] h-[320px] flex items-center justify-center">
+            <div className="rounded-[14px] overflow-hidden bg-bg-card w-[300px] h-[370px] flex items-center justify-center">
               <div
                 className="w-full h-full flex items-center justify-center text-6xl font-bold"
                 style={{
