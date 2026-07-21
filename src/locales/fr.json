@@ -57,7 +57,11 @@
   "skills": {
     "title": "Compétences",
     "description": "Langages, outils et frameworks maîtrisés.",
-    "graphInfo": "Graphe interactif — déplacez-vous librement dans la représentation",
+    "graphInfo": "Graphe interactif -> déplacez-vous librement dans la représentation",
+    "gridInfo": "Grille par domaine -> cliquez sur une compétence pour voir les détails",
+    "toggleTo2D": "Passer en vue plate (2D)",
+    "toggleTo3D": "Passer en vue 3D",
+    "autoLowEnd": "activé auto (perf. limitées)",
     "subtitle": "Hover pour explorer",
     "prompt": "← Cliquez ou survolez une compétence pour voir les détails",
     "usedIn": "Utilisé dans :",
@@ -77,7 +81,8 @@
   "humanly": {
     "title": "Côté humain",
     "subtitle": "Mes passions et ce que les gens disent de moi.",
-    "recommendations": "Mes recommandations"
+    "recommendations": "Mes recommandations",
+    "readMore": "Lire la suite"
   },
   "thinking": {
     "title": "Réflexions",
