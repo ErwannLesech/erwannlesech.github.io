@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CustomCursor } from "@/components/CustomCursor";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { ScrollProgress } from "@/components/ScrollProgress";
@@ -19,7 +18,6 @@ function Index() {
   return (
     <div className="relative">
       <ScrollProgress />
-      <CustomCursor />
       <Navbar />
       <main>
         <Hero />
