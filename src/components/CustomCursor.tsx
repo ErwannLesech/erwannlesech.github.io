@@ -35,17 +35,23 @@ export function CustomCursor() {
         transform: `translate3d(${pos.x}px, ${pos.y}px, 0)`,
       }}
     >
+      {/* Small dot — always visible */}
+      <div
+        className="absolute h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full"
+        style={{ background: "var(--accent)" }}
+      />
+      {/* Thin ring — enlarges on hover */}
       <motion.div
-        className="h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-difference"
+        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full"
         style={{
-          background: "var(--accent)",
-          boxShadow: "0 0 16px var(--accent-glow)",
+          border: "1.5px solid var(--accent)",
+          opacity: 0.55,
         }}
         animate={{
-          scale: hover ? 2.667 : 1,
-          opacity: hover ? 0.6 : 1,
+          width: hover ? 32 : 20,
+          height: hover ? 32 : 20,
         }}
-        transition={{ duration: 0.12, ease: "easeOut" }}
+        transition={{ duration: 0.15, ease: "easeOut" }}
       />
     </div>
   );

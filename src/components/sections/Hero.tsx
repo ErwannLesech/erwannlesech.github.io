@@ -106,18 +106,32 @@ export function Hero() {
                 e.preventDefault();
                 document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="px-6 py-3 rounded-pill font-medium text-white transition-all hover:scale-[1.03] hover:shadow-[0_0_24px_var(--accent-glow)]"
-              style={{ background: "var(--accent)" }}
+              className="px-6 py-3 rounded-pill font-medium border-2 transition-all duration-200"
+              style={{ borderColor: "var(--accent)", background: "var(--accent)", color: "white" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "var(--accent)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "white";
+              }}
             >
               {t("hero.viewProjects")}
             </a>
             <a
               href="/cv.pdf"
               download
-              className="px-6 py-3 rounded-pill font-medium border-2 transition-all hover:text-white inline-flex items-center gap-2"
-              style={{ borderColor: "var(--accent)", color: "var(--accent)" }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent)")}
-              onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
+              className="px-6 py-3 rounded-pill font-medium border-2 transition-all duration-200 inline-flex items-center gap-2"
+              style={{ borderColor: "var(--accent)", color: "var(--accent)", background: "transparent" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "white";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "var(--accent)";
+              }}
             >
               <Download size={16} />
               {t("hero.downloadCV")}
