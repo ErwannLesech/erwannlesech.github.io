@@ -56,6 +56,11 @@
   },
   "skills": {
     "title": "Skills",
+    "graphInfo": "Interactive graph -> freely navigate the 3D space",
+    "gridInfo": "Domain grid -> click a skill to see details",
+    "toggleTo2D": "Switch to flat view (2D)",
+    "toggleTo3D": "Switch to 3D view",
+    "autoLowEnd": "auto-enabled (limited performance)",
     "subtitle": "Hover to explore",
     "prompt": "← Click or hover a skill to see details",
     "usedIn": "Used in:",
@@ -75,7 +80,8 @@
   "humanly": {
     "title": "Humanly",
     "subtitle": "My passions and what people say about me.",
-    "recommendations": "My recommendations"
+    "recommendations": "My recommendations",
+    "readMore": "Read more"
   },
   "thinking": {
     "title": "Reflections",

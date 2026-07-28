@@ -1,9 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { ChefHat, Gamepad2, Music, Plane, Waves, Bike, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChefHat, Gamepad2, Music, Plane, Waves, Bike, ChevronLeft, ChevronRight, Quote, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Section } from "@/components/SectionWrapper";
 import { passions } from "@/data/passions";
-import { testimonials } from "@/data/testimonials";
+import { testimonials, type Testimonial } from "@/data/testimonials";
 import { useLang } from "@/lib/useLang";
 
 const ICONS = {
@@ -19,6 +19,7 @@ export function HumanSide() {
   const { t, pick } = useLang();
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [openTst, setOpenTst] = useState<Testimonial | null>(null);
 
   useEffect(() => {
     if (paused) return;
@@ -83,7 +84,7 @@ export function HumanSide() {
       <div>
         <h3 className="text-2xl font-semibold mb-8">{t("humanly.recommendations")}</h3>
         <div
-          className="relative h-[320px] overflow-hidden"
+          className="relative h-[360px] overflow-visible"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
@@ -108,9 +109,9 @@ export function HumanSide() {
                 style={{ pointerEvents: isVisible ? "auto" : "none" }}
               >
                 <div
-                  onClick={() => !isCenter && setIdx(i)}
+                  onClick={() => isCenter ? setOpenTst(tst) : setIdx(i)}
                   className={`rounded-2xl border bg-bg-card p-8 relative transition-all ${
-                    isCenter ? "border-[var(--accent)] shadow-[0_0_32px_var(--accent-glow)]" : "border-border-subtle"
+                    isCenter ? "border-[var(--accent)] shadow-[0_0_32px_var(--accent-glow)] cursor-pointer hover:shadow-[0_0_48px_var(--accent-glow)]" : "border-border-subtle"
                   } ${!isCenter ? "cursor-pointer hover:border-[var(--accent)] hover:shadow-[0_0_24px_var(--accent-glow)]" : ""}`}
                 >
                   <Quote size={30} style={{ color: "var(--accent)" }} className="opacity-80" />
@@ -119,11 +120,28 @@ export function HumanSide() {
                     initial={isCenter ? { opacity: 0 } : false}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="relative"
                   >
                     <p className="mt-4 italic text-text-primary leading-relaxed line-clamp-5">
                       {pick(tst.quote)}
                     </p>
+                    {isCenter && (
+                      <div className="absolute bottom-0 left-0 right-0 h-10 pointer-events-none"
+                        style={{ background: "linear-gradient(to bottom, transparent, var(--bg-card))" }}
+                      />
+                    )}
                   </motion.div>
+                  {isCenter && (
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.4, delay: 0.3 }}
+                      className="mt-1 text-xs text-text-secondary italic"
+                      style={{ color: "var(--accent)", opacity: 0.6 }}
+                    >
+                      {t("humanly.readMore")} →
+                    </motion.p>
+                  )}
                   <motion.div
                     key={`author-${i}`}
                     initial={isCenter ? { opacity: 0 } : false}
@@ -175,6 +193,65 @@ export function HumanSide() {
           </button>
         </div>
       </div>
+
+      {/* Testimonial modal */}
+      <AnimatePresence>
+        {openTst && (
+          <motion.div
+            key="overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+            style={{ background: "rgba(0,0,0,0.75)", backdropFilter: "blur(6px)" }}
+            onClick={() => setOpenTst(null)}
+          >
+            <motion.div
+              key="panel"
+              initial={{ opacity: 0, scale: 0.93, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.93, y: 24 }}
+              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-xl max-h-[85vh] flex flex-col rounded-2xl border border-[var(--accent)] bg-bg-card shadow-[0_0_60px_var(--accent-glow)]"
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setOpenTst(null)}
+                aria-label="Close"
+                className="absolute right-4 top-4 z-10 size-8 rounded-full flex items-center justify-center border border-border-subtle text-text-secondary hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
+              >
+                <X size={16} />
+              </button>
+
+              {/* Scrollable content */}
+              <div className="overflow-y-auto flex-1 p-6 sm:p-8">
+                <Quote size={32} style={{ color: "var(--accent)" }} className="opacity-80 mb-4 flex-shrink-0" />
+                <p className="italic text-text-primary leading-relaxed text-base sm:text-lg whitespace-pre-wrap">
+                  {pick(openTst.quote)}
+                </p>
+              </div>
+
+              {/* Author footer */}
+              <div className="flex-shrink-0 border-t border-border-subtle px-6 sm:px-8 py-4 flex items-center gap-3">
+                <div
+                  className="size-12 rounded-full bg-bg-secondary border border-border-subtle flex items-center justify-center text-mono text-sm font-semibold flex-shrink-0"
+                  style={{ color: "var(--accent)" }}
+                >
+                  {openTst.initials}
+                </div>
+                <div className="min-w-0">
+                  <p className="text-sm font-medium truncate">{openTst.name}</p>
+                  <span className="inline-block mt-0.5 px-2 py-0.5 rounded-pill text-xs border border-border-subtle text-text-secondary">
+                    {pick(openTst.relationship)}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Section>
   );
 }
